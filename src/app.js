@@ -131,7 +131,7 @@ function instructRover(matrix, rover, instruction, rover_index) {
             break;
     }
 }
-function moveRover(rover, matrix, index) {
+function moveRover(rover, matrix, rover_index) {
     y = parseInt(rover.actual_y)
     x = parseInt(rover.actual_x)
     switch (rover.actual_direction.toUpperCase()) {
@@ -148,23 +148,25 @@ function moveRover(rover, matrix, index) {
             x += 1 
             break;
     }
-    updateRoverPosition(rover, matrix, x, y, index)
+    updateRoverPosition(rover, matrix, x, y, rover_index)
 }
-function updateRoverPosition(rover, matrix, new_x, new_y, index) {
+function updateRoverPosition(rover, matrix, new_x, new_y, rover_index) {
     if (canMoveToPosition(matrix, new_x, new_y)) {
-        moveRoverIndicator(rover, matrix, new_x, new_y, index)
+        moveRoverIndicator(rover, matrix, new_x, new_y, rover_index)
         rover.actual_x = new_x
         rover.actual_y = new_y
     } else {
-        console.log(`\n❕Warning, rover #${index+1} couldn't move to ${new_x},${new_y} coordinates on the plateau.`);
+        console.log(`\n❕Warning: rover #${rover_index} couldn't move to ${new_x},${new_y} coordinates on the plateau.`);
     }
 }
 function canMoveToPosition(matrix, new_x, new_y) {
     return (matrix[new_y] !== undefined && matrix[new_y][new_x] !== undefined && matrix[new_y][new_x] == '#')
 }
 function moveRoverIndicator(rover, matrix, new_x, new_y, index) {
-    matrix[new_y][new_x] = getRoverIndicator(rover.actual_direction, index)
-    matrix[rover.actual_y][rover.actual_x] = "#"
+    if (canMoveToPosition(matrix, new_x, new_y)) {
+        matrix[new_y][new_x] = getRoverIndicator(rover.actual_direction, index)
+        matrix[rover.actual_y][rover.actual_x] = "#"
+    }
 }
 function rotateRover(instruction, rover, matrix, rover_index) {
     switch (rover.actual_direction.toUpperCase()) {
@@ -216,12 +218,10 @@ function rotateRoverIndicator(matrix, rover, new_direction, rover_index) {
     rover.actual_direction = new_direction
 }
 function placeRover(xCoordinate, yCoordinate, direction, matrix, rover_index) {
-    for (var row = matrix.length-1; row >= 0; row--) {
-        for(var column = 0; column < matrix[row].length; column++) {
-            if (row == yCoordinate && column == xCoordinate) {
-                matrix[row][column] = getRoverIndicator(direction, rover_index)
-            }
-        }
+    if (canMoveToPosition(matrix, xCoordinate, yCoordinate)) {
+        matrix[yCoordinate][xCoordinate] = getRoverIndicator(direction, rover_index)
+    } else {
+        console.log(`\n❕Warning: rover #${rover_index} couldn't be placed in ${xCoordinate},${yCoordinate} coordinates on the plateau.`);
     }
 }
 function getRoverIndicator(direction, index) {

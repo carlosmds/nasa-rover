@@ -58,6 +58,10 @@ describe("General rover logic functions", () => {
     moveRoverIndicator(sampleAwnsers.rovers[0], sampleMatrix, 2, 2, 0)
   });
 
+  test("it should not throw erros if the rover cannot be moved", () => {
+    moveRoverIndicator(sampleAwnsers.rovers[0], sampleMatrix, 6, 6, 0)
+  });
+
   test("it should rotate rover to the right without errors", () => {
     rotateRover('R', sampleAwnsers.rovers[0], sampleMatrix, 0)
   });
