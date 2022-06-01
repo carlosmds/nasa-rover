@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1654098867087" clover="3.2.0">
-  <project timestamp="1654098867088" name="All files">
-    <metrics statements="145" coveredstatements="145" conditionals="62" coveredconditionals="62" methods="31" coveredmethods="31" elements="238" coveredelements="238" complexity="0" loc="145" ncloc="145" packages="1" files="1" classes="1"/>
+<coverage generated="1654099172895" clover="3.2.0">
+  <project timestamp="1654099172896" name="All files">
+    <metrics statements="147" coveredstatements="147" conditionals="63" coveredconditionals="63" methods="31" coveredmethods="31" elements="241" coveredelements="241" complexity="0" loc="147" ncloc="147" packages="1" files="1" classes="1"/>
     <file name="app.js" path="/home/carlosmedeiros/misc/nasa-rover/src/app.js">
-      <metrics statements="145" coveredstatements="145" conditionals="62" coveredconditionals="62" methods="31" coveredmethods="31"/>
+      <metrics statements="147" coveredstatements="147" conditionals="63" coveredconditionals="63" methods="31" coveredmethods="31"/>
       <line num="3" count="3" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
       <line num="38" count="3" type="stmt"/>
@@ -122,33 +122,35 @@
       <line num="287" count="86" type="stmt"/>
       <line num="289" count="2" type="stmt"/>
       <line num="291" count="86" type="stmt"/>
-      <line num="294" count="15" type="cond" truecount="5" falsecount="0"/>
-      <line num="296" count="10" type="stmt"/>
-      <line num="297" count="10" type="stmt"/>
-      <line num="299" count="1" type="stmt"/>
-      <line num="300" count="1" type="stmt"/>
+      <line num="294" count="16" type="cond" truecount="6" falsecount="0"/>
+      <line num="296" count="1" type="stmt"/>
+      <line num="297" count="1" type="stmt"/>
+      <line num="299" count="10" type="stmt"/>
+      <line num="300" count="10" type="stmt"/>
       <line num="302" count="1" type="stmt"/>
       <line num="303" count="1" type="stmt"/>
       <line num="305" count="1" type="stmt"/>
       <line num="306" count="1" type="stmt"/>
-      <line num="308" count="2" type="stmt"/>
-      <line num="310" count="13" type="stmt"/>
+      <line num="308" count="1" type="stmt"/>
+      <line num="309" count="1" type="stmt"/>
+      <line num="311" count="2" type="stmt"/>
       <line num="313" count="14" type="stmt"/>
-      <line num="314" count="14" type="stmt"/>
-      <line num="315" count="87" type="stmt"/>
-      <line num="316" count="87" type="stmt"/>
-      <line num="317" count="630" type="stmt"/>
-      <line num="319" count="14" type="stmt"/>
-      <line num="322" count="39" type="stmt"/>
-      <line num="325" count="40" type="stmt"/>
-      <line num="326" count="240" type="stmt"/>
-      <line num="327" count="40" type="stmt"/>
+      <line num="316" count="15" type="stmt"/>
+      <line num="317" count="15" type="stmt"/>
+      <line num="318" count="90" type="stmt"/>
+      <line num="319" count="90" type="stmt"/>
+      <line num="320" count="648" type="stmt"/>
+      <line num="322" count="15" type="stmt"/>
+      <line num="325" count="39" type="stmt"/>
       <line num="328" count="40" type="stmt"/>
       <line num="329" count="240" type="stmt"/>
-      <line num="330" count="240" type="stmt"/>
-      <line num="331" count="1440" type="stmt"/>
+      <line num="330" count="40" type="stmt"/>
+      <line num="331" count="40" type="stmt"/>
+      <line num="332" count="240" type="stmt"/>
       <line num="333" count="240" type="stmt"/>
-      <line num="335" count="40" type="stmt"/>
+      <line num="334" count="1440" type="stmt"/>
+      <line num="336" count="240" type="stmt"/>
+      <line num="338" count="40" type="stmt"/>
     </file>
   </project>
 </coverage>

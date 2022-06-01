@@ -6,7 +6,7 @@ const prompts = () => {
             name: "matrix_size",
             type: "list",
             message: "🪐 Welcome to NASA rovers console. Choose from one of the predefined sizes to represent the plateau to be explored in Mars. 🔭✨",
-            choices: ["6x6", "6x9", '6x12', '9x12'],
+            choices: ["3x6", "6x6", "6x9", '6x12', '9x12'],
         },
         {
             name: "debug",
@@ -292,6 +292,9 @@ function validateInstruction(instruction, rover_index) {
 }
 function createMatrix(matrixSize) {
     switch (matrixSize) {
+        case '3x6':
+            var matrix = initializeMatrix(3, 6, '#')
+            break;
         case '6x6':
             var matrix = initializeMatrix(6, 6, '#')
             break;

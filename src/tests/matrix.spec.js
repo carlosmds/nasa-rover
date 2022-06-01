@@ -12,14 +12,15 @@ describe("General matrix logic function tests", () => {
 
   const sampleMatrix = createMatrix('6x6')
 
-  test("it can create matrix with sizes: 6x6, 6x9, 6x12 and 9x12", () => {
-    createMatrix('6x6')
-    createMatrix('6x9')
-    createMatrix('6x12')
-    createMatrix('9x12')
+  const sizes = ['3x6', '6x6', '6x9', '6x12', '9x12']
+
+  test("it can create matrix with sizes: '3x6', '6x6', '6x9', '6x12', '9x12'", () => {
+    sizes.forEach((size) => {
+      createMatrix(size)
+    })
   });
 
-  test("it cannot create matrix other than sizes: 6x6, 6x9, 6x12 and 9x12", () => {
+  test("it cannot create matrix other than sizes: 3x6, 6x6, 6x9, 6x12 and 9x12", () => {
     expect(() => {
       createMatrix('3x3')
     }).toThrow()
