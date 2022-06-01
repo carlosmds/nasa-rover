@@ -1,0 +1,31 @@
+{
+  "name": "voyager-rover-test",
+  "version": "1.0.0",
+  "description": "Programming test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --coverage tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/voyager-portal/voyager-rover-test.git"
+  },
+  "author": "Carlos Medeiros Souza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/voyager-portal/voyager-rover-test/issues"
+  },
+  "homepage": "https://gitlab.com/voyager-portal/voyager-rover-test#readme",
+  "devDependencies": {
+    "jest": "^28.1.0"
+  },
+  "jest": {
+    "transform": {}
+  },
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "inquirer-loop": "^0.3.0",
+    "ora": "^6.1.0"
+  }
+}
