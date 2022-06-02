@@ -10,8 +10,9 @@ const {
   rotateRoverIndicator,
   placeRover,
   getRoverIndicator,
-  createMatrix
-} = require('../app.js');
+} = require('../rover.js');
+
+const { createMatrix } = require('../matrix.js');
 
 describe("General rover logic functions", () => {
   

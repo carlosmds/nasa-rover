@@ -8,8 +8,9 @@ const {
     validateRoverInstructions,
     validateDirection,
     validateInstruction,
-    createMatrix
 } = require('../app.js');
+
+const { createMatrix } = require('../matrix.js');
 
 require('jest');
 

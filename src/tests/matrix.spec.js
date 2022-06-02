@@ -6,7 +6,7 @@ const {
   initializeMatrix,
   printMatrix,
   generateMatrixString
-} = require('../app.js');
+} = require('../matrix.js');
 
 describe("General matrix logic function tests", () => {
 
